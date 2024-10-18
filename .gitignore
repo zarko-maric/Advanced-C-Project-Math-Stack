@@ -160,3 +160,4 @@ ti_tools/include/xwcc.h
 ti_tools/include/ymath.h
 ti_tools/include/yvals.h
 ti_tools/stack.o
+ti_tools/a.out

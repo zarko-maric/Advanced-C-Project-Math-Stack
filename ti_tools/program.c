@@ -4,7 +4,7 @@
 #pragma CHECK_MISRA("-20.9") /*Ignorišemo jer nam je potreban printf.*/
 
 void check_parentheses(const char* expression) {
-    Stack stack;
+    Stack stack = {0};
     stack_init(&stack);
     int8_t has_parentheses = 0;
     int8_t error_occured = 0;
@@ -39,9 +39,9 @@ void check_parentheses(const char* expression) {
             printf("Neodgovarajuća otvorena zagrada na indeksu %d\n", open_indexe);
         }
     }else{
-        if (has_parentheses && is_empty(&stack)) {
+        if ((has_parentheses == 1) && is_empty(&stack)) {
             printf("Sve zagrade su pravilno uparene.\n");
-        } else if (!has_parentheses) {
+        } else if (has_parentheses == 0) {
             printf("Izraz ne sadrži zagrade.\n");
         } else {
             while (!is_empty(&stack)) {
