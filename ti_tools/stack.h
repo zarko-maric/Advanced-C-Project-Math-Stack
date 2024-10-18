@@ -1,3 +1,6 @@
+#ifndef STACK_H
+#define STACK_H
+
 #pragma CHECK_MISRA("none")
 #include <stddef.h>
 #include <stdint.h>
@@ -18,3 +21,4 @@ int16_t pop(Stack* s);
 bool is_empty(const Stack* s);
 bool is_full(const Stack* s);
 
+#endif /* STACK_H */
