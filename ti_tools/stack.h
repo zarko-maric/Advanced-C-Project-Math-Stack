@@ -18,7 +18,7 @@ typedef struct
 void stack_init(Stack* s);
 void push(Stack* s, int16_t value);
 int16_t pop(Stack* s);
-bool is_empty(const Stack* s);
-bool is_full(const Stack* s);
+int16_t is_empty(const Stack* s);
+int16_t is_full(const Stack* s);
 
 #endif /* STACK_H */
