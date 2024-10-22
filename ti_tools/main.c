@@ -3,20 +3,20 @@
 /*
  * Autor: Žarko Marić RA225/2021
  * 
- * Ovaj program implementira modul steka i koristi ga za proveru da li su
- * zagrade u zadatom matematičkom izrazu pravilno uparene. Program poštuje C17 sandrad i MISRA-C:2004
- * gde god je moguće.
- *
- * Pretpostavke:
- * - Izraz se sastoji od ASCII karaktera.
- * - Proveravaju se samo zagrade '(' i ')'.
+ * Napraviti modul koji predstavlja stek. 
+ * Modul izvesti kao statičku biblioteku. 
+ * Zatim, oslanjajući se na taj stek, napraviti funkciju koja prima znakovni niz čiji sadržaj predstavlja matematičku formulu.
+ * U takvom znakovnom nizu funkcija proverava da li svaka otvorena zagrada '(' ima svoju odgovarajuću zatvorenu zagradu ')',
+ * i na standardni izlaz ispisuje indekse (indekse znakova u zadatkom znakovnom nizu) parova zagrada.
  * 
  * Ograničenja:
  * - Maksimalna dužina izraza je ograničena sa STACK_MAX_SIZE.
  * 
  * Uputstvo za pokretanje:
- * -Potrebno je pozicionirati se folder sa projektom, preciznije u folder ../ti_tools/ i pokrenuti komandu source set_env.sh,
- *  a potom kompajlovati program uz pomoć gcc main.c stack.c program.c. Program možemo pokrenuti komandom ./a.out.
+ * - Potrebno je pozicionirati se folder sa projektom, preciznije u folder ../ti_tools/ , 
+ * a potom kompajlovati program uz pomoć gcc main.c stack.c program.c. Program možemo pokrenuti komandom ./a.out.
+ * - Kako bi smo proverili MISRA standard, potrebno je pozicionirati se u ti_tools folder, potom pokrenuti komandu source set_env.sh,
+ * potom pokrenuti komandu cl6x --include_path=$TI_INCLUDE --compile_only --check_misra=all ime_programa.c
  */
 
 int32_t main(void) {

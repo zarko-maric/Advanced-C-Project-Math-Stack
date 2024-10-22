@@ -1,5 +1,4 @@
 #include "stack.h"
-#include <assert.h>
 
 void stack_init(Stack* s)
 {
