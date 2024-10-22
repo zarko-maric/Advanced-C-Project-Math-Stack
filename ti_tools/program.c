@@ -50,7 +50,7 @@ void check_parentheses(const char* expression)
     {
         printf("Izraz ne sadrži zagrade.\n");
     }
-    else if (!error_occured && has_parentheses > 0)
+    else if (!error_occured && (has_parentheses > 0))
     {
         printf("Sve zagrade su pravilno uparene.\n");
     }
