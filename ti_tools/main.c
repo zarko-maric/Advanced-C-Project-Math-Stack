@@ -13,9 +13,9 @@
  * - Maksimalna dužina izraza je ograničena sa STACK_MAX_SIZE.
  * 
  * Uputstvo za pokretanje:
- * - Potrebno je pozicionirati se folder sa projektom, preciznije u folder ../ti_tools/ , 
+ * - Potrebno je pozicionirati se u folder sa projektom, preciznije u folder ../ti_tools/ , 
  * a potom kompajlovati program uz pomoć gcc main.c stack.c program.c. Program možemo pokrenuti komandom ./a.out.
- * - Kako bi smo proverili MISRA standard, potrebno je pozicionirati se u ti_tools folder, potom pokrenuti komandu source set_env.sh,
+ * - Kako bismo proverili MISRA standard, potrebno je pozicionirati se u ti_tools folder, potom pokrenuti komandu source set_env.sh,
  * potom pokrenuti komandu cl6x --include_path=$TI_INCLUDE --compile_only --check_misra=all ime_programa.c
  */
 
