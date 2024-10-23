@@ -18,9 +18,9 @@ typedef struct
 } Stack;
 
 void stack_init(Stack* s);
-void push(Stack* s, int16_t value);
-int16_t pop(Stack* s);
-int16_t is_empty(const Stack* s);
-int16_t is_full(const Stack* s);
+void push(Stack* s, int16_t push_value);
+int_least16_t pop(Stack* s);
+int_least8_t is_empty(const Stack* s);
+int_least8_t is_full(const Stack* s);
 
 #endif /* STACK_H */

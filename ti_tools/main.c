@@ -1,5 +1,8 @@
 #include "program.h"
 
+#pragma CHECK_MISRA("-20.9") /*Potreban nam je printf, stoga ignorišemo ovo upozorenje.*/
+#pragma CHECK_MISRA("-8.1") /*Nema potebe za deklarisanje main-a.*/
+
 /*
  * Autor: Žarko Marić RA225/2021
  * 
@@ -14,25 +17,21 @@
  * 
  * Uputstvo za pokretanje:
  * - Potrebno je pozicionirati se u folder sa projektom, preciznije u folder ../ti_tools/ , 
- * a potom kompajlovati program uz pomoć gcc main.c stack.c program.c. Program možemo pokrenuti komandom ./a.out.
+ * a potom kompajlovati program uz pomoć gcc main.c program.c -L. -lstack. Program možemo pokrenuti komandom ./a.out.
  * - Kako bismo proverili MISRA standard, potrebno je pozicionirati se u ti_tools folder, potom pokrenuti komandu source set_env.sh,
  * potom pokrenuti komandu cl6x --include_path=$TI_INCLUDE --compile_only --check_misra=all ime_programa.c
  */
 
 int32_t main(void) {
     /* Unos korisnikove funkcije. */
-    char input[STACK_MAX_SIZE];
+    char input[STACK_MAX_SIZE] = {0};
     printf("Unesite matematičku funkciju: \n");
-    fgets(input, sizeof(input), stdin);
-
-    size_t len = strlen(input);
-    if (len > 0 && (input[len - 1] == '\n'))
-    {
-        input[len - 1] = '\0';
-    }
+    fgets(input, (int32_t)sizeof(input), stdin);
 
     printf("Provera zagrada za uneti izraz: %s\n", input);
     check_parentheses(input);
+
+    printf("\n");
 
     /* Test 1: Ispravno uparene zagrade */
     const char* test1 = "(1 + 2) * (3 + (4 - 5))";
