@@ -31,7 +31,8 @@ void check_parentheses(const char* expression)
 			{
 				printf("Neodgovarajuća zatvorena zagrada na indeksu %d\n", index);
 				error_occured++;
-			}else
+			}
+			else
 			{
 				int16_t open_index = pop(&stack);
 			printf("Par zagrada: otvorena na indeksu %d, zatvorena na indeksu %d\n", (uint16_t)open_index, index);
