@@ -35,24 +35,24 @@ void check_parentheses(const char* expression)
 			else
 			{
 				int16_t open_index = pop(&stack);
-			printf("Par zagrada: otvorena na indeksu %d, zatvorena na indeksu %d\n", (uint16_t)open_index, index);
+				printf("Par zagrada: otvorena na indeksu %d, zatvorena na indeksu %d\n", (uint16_t)open_index, index);
 			}
 		}
 	}
 
 	while (!is_empty(&stack))
-    {
-        int16_t open_index = pop(&stack);
-        printf("Neodgovarajuća otvorena zagrada na indeksu %d\n", open_index);
-        error_occured++;
-    }
+	    {
+	        int16_t open_index = pop(&stack);
+	        printf("Neodgovarajuća otvorena zagrada na indeksu %d\n", open_index);
+	        error_occured++;
+	    }
 
 	if (has_parentheses == 0)
-    {
-        printf("Izraz ne sadrži zagrade.\n");
-    }
-    else if (!error_occured && (has_parentheses > 0))
-    {
-        printf("Sve zagrade su pravilno uparene.\n");
-    }
+	{
+		printf("Izraz ne sadrži zagrade.\n");
+	}
+	else if (!error_occured && (has_parentheses > 0))
+	{
+		printf("Sve zagrade su pravilno uparene.\n");
+	}
 }
