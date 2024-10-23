@@ -22,12 +22,12 @@
 int32_t main(void) {
     /* Unos korisnikove funkcije. */
     char input[STACK_MAX_SIZE] = {0};
+    
     printf("Unesite matematičku funkciju: \n");
     fgets(input, (int32_t)sizeof(input), stdin);
 
     printf("Provera zagrada za uneti izraz: %s\n", input);
     check_parentheses(input);
-
     printf("\n");
 
     /* Test 1: Ispravno uparene zagrade */
