@@ -28,11 +28,11 @@ int_least16_t pop(Stack* s)
 int_least8_t is_empty(const Stack* s)
 {
 	assert(s != NULL);
-	return (s->top == (int16_t)-1) ? (int16_t)1 : (int16_t)0;
+	return (s->top == (int16_t)-1) ? (int_least8_t)1 : (int_least8_t)0;
 }
 
 int_least8_t is_full(const Stack* s)
 {
 	assert(s != NULL);
-    return (s->top == (STACK_MAX_SIZE - (int16_t)1)) ? (int16_t)1 : (int16_t)0;
+    return (s->top == (STACK_MAX_SIZE - (int16_t)1)) ? (int_least8_t)1 : (int_least8_t)0;
 }

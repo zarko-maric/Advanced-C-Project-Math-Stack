@@ -2,6 +2,7 @@
 
 #pragma CHECK_MISRA("-17.4") /*Relaksirano u MISRA 2012.*/
 #pragma CHECK_MISRA("-20.9") /*Potreban nam je printf, stoga ignorišemo ovo upozorenje.*/
+#pragma CHECK_MISRA("-6.1") 
 
 void check_parentheses(const char* expression)
 {
@@ -38,12 +39,16 @@ void check_parentheses(const char* expression)
 				printf("Par zagrada: otvorena na indeksu %d, zatvorena na indeksu %d\n", open_index, index);
 			}
 		}
+		else
+		{
+
+		}
 	}
 
 	while (!is_empty(&stack))
 	    {
-	        int16_t open_index = pop(&stack);
-	        printf("Neodgovarajuća otvorena zagrada na indeksu %d\n", open_index);
+	        int16_t open_indexe = pop(&stack);
+	        printf("Neodgovarajuća otvorena zagrada na indeksu %d\n", open_indexe);
 	        error_occured++;
 	    }
 
@@ -51,8 +56,12 @@ void check_parentheses(const char* expression)
 	{
 		printf("Izraz ne sadrži zagrade.\n");
 	}
-	else if (!error_occured && (has_parentheses > 0))
+	else if ((error_occured == 0) && (has_parentheses > 0))
 	{
 		printf("Sve zagrade su pravilno uparene.\n");
+	}
+	else
+	{
+
 	}
 }
