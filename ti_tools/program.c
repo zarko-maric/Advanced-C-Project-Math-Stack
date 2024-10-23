@@ -1,7 +1,7 @@
 #include "program.h"
 
 #pragma CHECK_MISRA("-17.4") /*Relaksirano u MISRA 2012.*/
-#pragma CHECK_MISRA("-20.9") /*Potreban nam je printf i scanf, stoga ignorišemo ovo upozorenje.*/
+#pragma CHECK_MISRA("-20.9") /*Potreban nam je printf, stoga ignorišemo ovo upozorenje.*/
 
 void check_parentheses(const char* expression)
 {
