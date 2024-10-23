@@ -10,10 +10,7 @@
  * Modul izvesti kao statičku biblioteku. 
  * Zatim, oslanjajući se na taj stek, napraviti funkciju koja prima znakovni niz čiji sadržaj predstavlja matematičku formulu.
  * U takvom znakovnom nizu funkcija proverava da li svaka otvorena zagrada '(' ima svoju odgovarajuću zatvorenu zagradu ')',
- * i na standardni izlaz ispisuje indekse (indekse znakova u zadatkom znakovnom nizu) parova zagrada.
- * 
- * Ograničenja:
- * - Maksimalna dužina izraza je ograničena sa STACK_MAX_SIZE.
+ * i na standardni izlaz ispisuje indekse (indekse znakova u zadatom znakovnom nizu) parova zagrada.
  * 
  * Uputstvo za pokretanje:
  * - Potrebno je pozicionirati se u folder sa projektom, preciznije u folder ../ti_tools/ , 
@@ -53,11 +50,11 @@ int32_t main(void) {
     printf("\nTest 4: Provera zagrada za izraz: %s\n", test4);
     check_parentheses(test4);
 
-    const char* test5 = "((((((((((";
+    const char* test5 = "(((((((((()";
     printf("\nTest 5: Provera zagrada za izraz: %s\n", test5);
     check_parentheses(test5);
 
-    const char* test6 = "))))))))))";
+    const char* test6 = "))))))))))(";
     printf("\nTest 6: Provera zagrada za izraz: %s\n", test6);
     check_parentheses(test6);
     
